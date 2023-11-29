@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>(보건 동행)전국 이동센터 정보</title>
+    <title>Crime Insight</title>
     <style>
     .wrap {position: absolute;left: 0;bottom: 40px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.2;}
     .wrap * {padding: 0;margin: 0;}
@@ -28,6 +29,9 @@
 	<link rel="shortcut icon" href="https://picocss.com/favicon.ico" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
 	<link rel="stylesheet" href="css1/pico.min.css">
+    .info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}	
+</style>
+	
 	<article data-theme="dark">
 	<header>
 		<link href="css/styles.css" rel="stylesheet" />
@@ -38,18 +42,29 @@
 <p style="margin-top:-12px">
 </p>
 <div id="map" style="width:100%;height:800px;"></div>
+    
+<p style="margin-top:-12px">
+    마커를 클릭하여 자치구를 선택하세요.
+</p>
+<div id="map" style="width:100%;height:900px;"></div>
 
 <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=2a6fa26b5611310b642937947b2f84aa"></script>
 <script>
 var mapContainer = document.getElementById('map'), // 지도의 중심좌표
     mapOption = { 
+<<<<<<< HEAD
         center: new kakao.maps.LatLng(33.451475, 126.570528), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
+=======
+        center: new kakao.maps.LatLng(37.5135217,126.9739251), // 지도의 중심좌표
+        level: 8 // 지도의 확대 레벨
+>>>>>>> e72e275 (커밋 메시지)
     }; 
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
 
+<<<<<<< HEAD
 // HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
 if (navigator.geolocation) {
     
@@ -74,6 +89,8 @@ if (navigator.geolocation) {
         
     displayMarker(locPosition, message);
 }
+=======
+>>>>>>> e72e275 (커밋 메시지)
 
 // 지도에 마커와 인포윈도우를 표시하는 함수입니다
 function displayMarker(locPosition, message) {
@@ -119,9 +136,32 @@ function displayMarker(locPosition, message) {
 // 센터명, 위치 정보
 var positions = [
 {
+<<<<<<< HEAD
 	title: '<div style="padding:5px;"> 사)충남지체장애인협회 당진시지회</div>',
 	lating: new kakao.maps.LatLng( 36.88724061 , 126.6247065 )
 },
+=======
+	title: '<div style="padding:5px;"> 용산구 장소별 범죄 통계</div>',
+	lating: new kakao.maps.LatLng( 37.5313805, 126.9798839 )
+},
+{
+    title: '<div style="padding:5px;"> 중구 장소별 범죄 통계</div>',
+    lating: new kakao.maps.LatLng( 37.5601443,126.9959649 )
+},
+{
+    title: '<div style="padding:5px;"> 서초구 장소별 범죄 통계</div>',
+    lating: new kakao.maps.LatLng( 37.4732933,127.0312101 )
+},
+{
+    title: '<div style="padding:5px;"> 동작구 장소별 범죄 통계</div>',
+    lating: new kakao.maps.LatLng( 37.4988794, 126.9516345 )
+},
+{
+    title: '<div style="padding:5px;"> 강남구 장소별 범죄 통계</div>',
+    lating: new kakao.maps.LatLng( 37.4966645, 127.0629804 )
+}
+
+>>>>>>> e72e275 (커밋 메시지)
 
 ];
 
@@ -129,6 +169,7 @@ var positions = [
 
 // 많은 정보,,,;
     var contents = [
+<<<<<<< HEAD
     {
 name: ' 사)충남지체장애인협회 당진시지회 ',
 address: ' <div class="ellipsis"> 충청남도 당진시 백암1길 61 </div> ',
@@ -138,6 +179,33 @@ mo_time: ' <div class="jibun ellipsis"> (차량운행) 평일: 08:00 ~ 19:00  �
 url: ' <div><a href= " http://corona19.dangjin.go.kr/ " target="_blank" class="link">홈페이지 : http://corona19.dangjin.go.kr/ </a></div> ',
 navi: ' <div><a href= " https://map.kakao.com/link/to/ 사)충남지체장애인협회 당진시지회 , 36.88724061 , 126.6247065 " target="_blank" class="link">길 찾기(카카오 지도) </a></div> ',
 },
+=======
+        {
+            name: ' 용산구 ',
+            address: ' 용산구 장소별 범죄 통계 데이터입니다.',
+            url: ' <div><a href= " http://corona19.dangjin.go.kr/ " target="_blank" class="link">XX구 데이터 보기</a></div> ',
+        },
+        {
+            name: ' 중구 ',
+            address: ' 중구 장소별 범죄 통계 데이터입니다.',
+            url: ' <div><a href= " http://corona19.dangjin.go.kr/ " target="_blank" class="link">XX구 데이터 보기</a></div> ',
+        },
+        {
+            name: ' 서초구 ',
+            address: ' 서초구 장소별 범죄 통계 데이터입니다.',
+            url: ' <div><a href= " http://corona19.dangjin.go.kr/ " target="_blank" class="link">XX구 데이터 보기</a></div> ',
+        },
+        {
+            name: ' 동작구 ',
+            address: ' 용산구 장소별 범죄 통계 데이터입니다.',
+            url: ' <div><a href= " http://corona19.dangjin.go.kr/ " target="_blank" class="link">XX구 데이터 보기</a></div> ',
+        },
+        {
+            name: ' 강남구 ',
+            address: ' 용산구 장소별 범죄 통계 데이터입니다.',
+            url: ' <div><a href= " http://corona19.dangjin.go.kr/ " target="_blank" class="link">XX구 데이터 보기</a></div> ',
+        },
+>>>>>>> e72e275 (커밋 메시지)
 ]
 
 
@@ -152,6 +220,7 @@ for (var i=0; i<positions.length;i++){
 	marker.setMap(map);
 	
     // 커스텀 오버레이에 표시할 컨텐츠 입니다
+<<<<<<< HEAD
     var content = '<div class="wrap">' + 
                 '      <div class="info">' + 
                 '        <div class="title">' + 
@@ -171,6 +240,24 @@ for (var i=0; i<positions.length;i++){
                 '    </div>' +    
                 '</div>';
 
+=======
+
+
+                var content = '<div class="wrap">' + 
+                    '    <div class="info">' + 
+                    '        <div class="title">' + 
+                                contents[i].name+ 
+                    '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' + 
+                    '        </div>' + 
+                    '        <div class="body">' + 
+                    '            <div class="desc">' + 
+                                    contents[i].address+
+                                    contents[i].url+ 
+                    '            </div>' + 
+                    '        </div>' + 
+                    '    </div>' +    
+                    '</div>';
+>>>>>>> e72e275 (커밋 메시지)
     // 마커 위에 커스텀오버레이를 표시합니다
     // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
   	var overlay = new kakao.maps.CustomOverlay({

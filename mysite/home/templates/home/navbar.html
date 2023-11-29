@@ -36,6 +36,7 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="{% url 'data:safemap' %}">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Safe Map
                         </a>
@@ -49,6 +50,8 @@
                                 <a class="nav-link" href="layout-static.html">지역별 통계</a>
                                 <a class="nav-link" href="layout-sidenav-light.html">장소별 통계</a>
                                 <a class="nav-link" href="layout-sidenav-light.html">검거율 통계</a>
+                                <a class="nav-link" href="{% url 'data:region' %}">지역별 통계</a>
+                                <a class="nav-link" href="{% url 'data:location' %}">장소별 통계</a>
                             </nav>
                         </div>
 

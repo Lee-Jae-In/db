@@ -79,6 +79,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
 # DATABASES = {
 #     "default": {
 #         "ENGINE": "django.db.backends.sqlite3",
@@ -95,6 +96,26 @@ DATABASES = {
         'PORT': '',  # MySQL 포트 (기본값은 빈 문자열)
     }
 }
+
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
+}
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'mysql.connector.django',
+#         'NAME': 'your_database_name',
+#         'USER': 'your_mysql_username',
+#         'PASSWORD': 'your_mysql_password',
+#         'HOST': 'localhost',
+#         'PORT': '',  # MySQL 포트 (기본값은 빈 문자열)
+#     }
+# }
+
 
 
 

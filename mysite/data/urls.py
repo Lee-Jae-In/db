@@ -8,4 +8,5 @@ urlpatterns = [
     path('location/', views.location, name='location'),
     path('safemap/', views.safemap, name='safemap'),
     path('region/', views.region, name='region'),
+    
 ]
